@@ -58,7 +58,6 @@ export default () => (
       responseType="id_token"
       isSignedIn
       theme="dark"
-      stateParams={{ redirectUrl: 'www.google.com' }}
       // disabled
       // prompt="consent"
       // className='button'
@@ -90,7 +89,7 @@ export default () => (
     <GoogleLogin onSuccess={success} onFailure={error} clientId={clientId} />
     <br />
     <br />
-    <GoogleLogin theme="dark" onSuccess={success} onFailure={error} clientId={clientId} stateParams={{ redirectUrl: 'www.google.com' }} />
+    <GoogleLogin theme="dark" onSuccess={success} onFailure={error} clientId={clientId} />
     <br />
     <br />
     <GoogleLogin theme="dark" style={{ background: 'blue' }} onSuccess={success} onFailure={error} clientId={clientId} />
