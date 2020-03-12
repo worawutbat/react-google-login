@@ -142,6 +142,7 @@ export interface UseGoogleLogoutProps {
   readonly scope?: string,
   readonly uxMode?: string;
   readonly jsSrc?: string;
+  readonly stateParams?: Object;
 }
 
 export function useGoogleLogout(input: UseGoogleLogoutProps): UseGoogleLogoutResponse;
@@ -170,6 +171,7 @@ export interface UseGoogleLoginProps {
   readonly isSignedIn?: boolean;
   readonly discoveryDocs?: any;
   readonly accessType?: string;
+  readonly stateParams?: Object;
 }
 
 export function useGoogleLogin(input: UseGoogleLoginProps): UseGoogleLoginResponse;

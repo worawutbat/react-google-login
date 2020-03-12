@@ -19,7 +19,8 @@ const useGoogleLogin = ({
   responseType,
   jsSrc,
   onRequest,
-  prompt
+  prompt,
+  stateParams
 }) => {
   const [loaded, setLoaded] = useState(false)
 
@@ -74,7 +75,8 @@ const useGoogleLogin = ({
         ux_mode: uxMode,
         redirect_uri: redirectUri,
         scope,
-        access_type: accessType
+        access_type: accessType,
+        state: btoa(stateParams)
       }
 
       if (responseType === 'code') {
